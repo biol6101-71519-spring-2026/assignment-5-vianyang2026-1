@@ -1,0 +1,13 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base>=4.2
+  - bioconductor-ggtree
+  - bioconductor-treeio
+  - r-ape
+  - r-phytools
+  - r-phangorn
+  - r-ggplot2
+  - r-optparse
+  - r-gridextra
