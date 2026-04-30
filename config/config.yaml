@@ -1,22 +1,19 @@
-# Configuration file for Assignment 5: Phylogenetic Analysis Pipeline
-# 
-# Fill in the parameters below for your analysis
-# 
-# Recommended configuration structure:
-#
-# genes:
-#   - gene1
-#   - gene2
-#   - gene3
-#
-# input_dir: "path/to/your/fasta/files"
-#
-# alignment:
-#   method: "auto"  # MAFFT alignment method
-#   trim_method: "automated1"  # trimAl method
-#
-# phylogeny:
-#   bootstrap: 1000
-#   threads: 4
-#
-# Add additional parameters as needed for your workflow
+genes:
+  - COI
+  - CYTB
+  - ITS2
+
+data_dir: "data"
+
+alignment:
+  mafft_method: "--auto"        # MAFFT alignment strategy
+  trimal_method: "-automated1"  # trimAl trimming method
+
+phylogeny:
+  bootstrap: 100   # standard bootstrap replicates (-b); produces .contree
+
+threads:
+  mafft:   4
+  trimal:  1
+  iqtree:  8
+  astral:  4
